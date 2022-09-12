@@ -1,0 +1,19 @@
+input[type="email"]::-webkit-input-placeholder
+    transform: translateY(0%)
+    transform-style: preserve-3d
+    transition: all .7s
+    font-size: calc(.4rem + 1vw)
+    
+.emailField
+    width: 60%
+    padding: calc(.5rem + 0.3vw)
+    outline: none
+    border: none
+    font-size: calc(.5rem + 1vw)
+    &:focus::-webkit-input-placeholder
+        transform: translateY(-100%)
+        opacity: 0
+@media ( max-width: 767px )
+    .formFloating
+        flex-direction: column
+        align-items: center

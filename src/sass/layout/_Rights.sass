@@ -1,0 +1,28 @@
+.article-head
+    color: #e50914
+    background: #dddddd52
+    padding-block: calc(.2rem + 1vw)
+    white-space: nowrap
+    border-left: 4px solid red
+    position: relative
+    ~ p
+        font-size: max(13px, calc(.3rem + 1vw))
+    span
+        opacity: 0
+        cursor: pointer
+        left: -25px
+        top: 22px
+        transform: translate(-50%, -50%) scale(1.3)
+    &:hover
+        span
+            transition: opacity, transform .5s
+            opacity: 1
+@media ( max-width: 500px )
+    .article-head
+        span
+            position: relative !important
+            transform: none
+            left: 0
+            top: 0
+            margin-left: 10px
+        

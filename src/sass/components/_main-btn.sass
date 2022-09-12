@@ -1,0 +1,17 @@
+.main_btn
+    color: #fff
+    background: red
+    white-space: nowrap
+    line-height: 0
+    max-width: 80px
+    border: none
+    font-weight: 500
+    min-width: fit-content
+    font-size: clamp(1px,16px,calc(.7rem + 1vw))
+    &:is(:hover, :focus, :focus+.btn)
+        .iconDisplacement
+            transform: translate(50%,0)
+            transition: transform .3s ease-in-out
+.bgFade
+    &:hover
+        filter: brightness(.9)

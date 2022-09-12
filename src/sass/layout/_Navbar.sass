@@ -1,0 +1,31 @@
+@use 'sass:color'
+$light: #fff
+$dark: #212529
+.navbar--normal
+    width: 100%
+    position: absolute
+    height: 50px !important
+    *
+        height: 100%
+        
+    .navbar
+        align-items: stretch
+        .navbar-brand
+            .brand-head
+                color: color.invert($dark)
+        form
+            display: flex
+            justify-content: flex-end
+
+.navbar--relative
+    @extend .navbar--normal
+    position: relative
+    background: $light
+.navbar--blank
+    @extend .navbar--relative
+    .navbar-brand
+        width: 100% !important
+        justify-content: center
+    form
+        display: none !important
+

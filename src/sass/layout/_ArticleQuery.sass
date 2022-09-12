@@ -1,0 +1,33 @@
+.article-query
+    .query
+        &:hover
+            background: red
+            color: #fff !important
+.uselessArticle
+    .problem
+        label
+            cursor: pointer
+        > input[type="radio"]
+            display: none
+        > input[type="radio"] + *::before
+            content: ""
+            display: inline-block
+            vertical-align: middle
+            width: 1.1rem
+            height: 1.1rem
+            margin-right: 0.7rem
+            border-radius: 50%
+            border-style: solid
+            border-width: 0.1rem
+            border-color: gray
+        > input[type="radio"] + *
+            color:  gray
+        > input[type="radio"]:checked + *
+            color: red
+            transition: all .5s
+        > input[type="radio"]:checked + *::before
+            background: radial-gradient(red 0%, red 40%, transparent 50%, transparent)
+            border-color: red
+        > input[type="radio"] + *
+            display: inline-block
+            padding: 0.5rem 1rem

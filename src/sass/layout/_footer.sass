@@ -1,0 +1,63 @@
+$colorSet: (#fffb00, #3ef, #ffae00, #f3f, #03f7a6, #faa, #ff08f3)
+
+.footer--normal
+    border-top: .5rem solid #222
+    padding: 10px
+    background: #000
+    .exect
+        margin-bottom: 10px
+        padding: .5rem
+        >a
+            border-left: 5px solid red
+            color: #fff !important
+            display: block
+            padding: 0px 10px
+            line-height: 40px
+    .pageLinks
+        display: flex
+        padding: 0
+        margin: .5rem 0
+        >a
+            color: #616161
+            // width: 100%
+            white-space: nowrap
+            text-decoration: none
+        >i
+            margin: 0 5px 0 20px
+        @for $i from 0 through 14
+            .icon-#{$i}
+                $color: nth($colorSet, random(length($colorSet)))
+                color: $color
+                transition: opacity, transform .3s
+                opacity: 0
+                height: 100%
+                line-height: 1
+                text-align: center
+                ~ a:hover
+                    color: $color
+            &:hover .icon-#{$i}
+                opacity: 1
+.footer--white
+    @extend .footer--normal
+    background: white
+    border: 0 
+    .pageLinks
+        a
+            width: fit-content
+            &:hover
+                color: currentcolor !important
+                transform: none
+                text-decoration: underline !important
+@media ( min-width: 400px )
+    .pageLinks
+        width: 50% !important
+@media ( min-width: 600px )
+    .pageLinks
+        width: calc(100% / 3) !important
+        a
+            &:hover
+                transition: all 1s
+                transform: translateX(10px)
+    .exect
+        a
+            background: linear-gradient(to right, #ffffff1f 3%, transparent)

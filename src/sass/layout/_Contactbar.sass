@@ -1,0 +1,36 @@
+.call-pop-up
+    padding: 20px
+    width: 350px
+    bottom: 90%
+    right: 10%
+    border-radius: 5px
+    background: #f5f5f1
+    box-shadow: 0 0 24px 0px #adadad
+    button
+        color: #8A8A88
+        font-family: monospace
+.live-chat-pop-up
+    > *:not(li,p)
+        padding: 10px
+    > button
+        all: unset
+    width: 310px
+    bottom: 70px
+    right: 0px
+    border-radius: 5px
+    background: #f5f5f1
+    box-shadow: 0 0 14px 0px #696969
+    ul
+        border-top: 1px solid #d5d4d1
+        li
+            display: flex
+            justify-content: space-between
+            align-items: center
+            background: #fff
+            border-bottom: 1px solid #d5d4d1
+            &:hover *
+                color: red !important
+                text-decoration: underline !important
+            &:hover svg
+                transition: all .5s
+                transform: translateX(5px)

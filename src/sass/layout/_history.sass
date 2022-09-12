@@ -1,0 +1,19 @@
+$move:(val-3: 1.5px,val-2: -1.5px)
+
+@for $i from 3 through length($move)
+    .btnhover:nth-child(#{$i})
+        color: #00000059
+        filter: drop-shadow(0px 0px 0px white)
+        svg
+            width: 35px
+        &:hover
+            path:is(:nth-child(2),:nth-child(1))
+                color: rgb(229, 9, 20) !important
+                transition: all .5s
+                transform: translateX(map-get($move, val-#{$i}))
+        @media (max-width: 768px)
+            path:nth-child(3)
+                display: none
+        @media (max-width: 576px)
+            path:nth-child(2)
+                display: none
